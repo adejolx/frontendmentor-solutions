@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fontsize-reg: 600;
+  --space: 1em;
+  --dark-blue: hsl(218, 44%, 22%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+
+  --fontwgt-bold: 400;
+  --fontwgt-bolder: 700;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 2em;
+  background-color: var(--light-gray);
+  font-family: 'Outfit', sans-serif;
+  font-weight: var(--fontwgt-bold);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.card {
+  background-color: var(--white);
+  box-shadow: 0px 0px 15px -20px var(--grayish-blue);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+  max-width: 300px;
+  padding: var(--space);
+  border-radius: var(--space);
+}
+.card-copy > * {
+  text-align: center;
+  padding-inline: var(--space);
+}
+.card-copy > :first-child {
+  font-weight: var(--fontwgt-bolder);
+  color: var(--dark-blue);
+}
+.card-copy > :nth-child(2) {
+  padding-bottom: 2em;
+  color: var(--grayish-blue);
+}
+.card-copy > * + * {
+  margin-top: var(--space);
+}
+.card-code {
+  order: -1;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.card-code > img {
+  max-width: 100%;
+  display: block;
+}
+
+.card + .attribution {
+  margin-block-start: 2em;
+}

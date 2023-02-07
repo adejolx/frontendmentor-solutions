@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 0.9375rem;
+  font-family: 'League Spartan', sans-serif;
+  --fontwgt-reg: 400;
+  --fontwgt-bold: 500;
+  --fontwgt-bolder: 700;
+
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  line-height: 1.5;
+  color: var(--VeryDarkMagenta);
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+section + section {
+  margin-top: 1em;
+}
+.container {
+  padding-inline: 1.5em;
+  padding-block: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  max-width: 1024px;
+  margin-inline: auto;
+  background-image: url('./images/bg-pattern-top-mobile.svg'),
+    url('./images/bg-pattern-bottom-mobile.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-size: contain, contain;
+}
+.container > * {
+  flex-grow: 1;
+}
+.container > :nth-child(1) {
+  flex-basis: 20rem;
+}
+.container > :nth-child(2) {
+  flex-basis: 30rem;
+  flex-grow: 2;
+}
+.container > :nth-child(3) {
+  flex-basis: 999rem;
+}
+.intro {
+  padding-block: 1em;
+}
+.intro > * {
+  text-align: center;
+}
+.intro > p:nth-of-type(1) {
+  line-height: 0.85;
+  font-size: 2rem;
+  font-weight: var(--fontwgt-bolder);
+}
+@media screen and (min-width: 48rem) {
+  .container {
+    background-image: url('./images/bg-pattern-top-desktop.svg'),
+      url('./images/bg-pattern-bottom-desktop.svg');
+    background-size: 40%, 70%;
+  }
+  .intro > * {
+    text-align: left;
+  }
+  .intro > p:nth-of-type(1) {
+    max-inline-size: 15ch;
+    font-size: 3.5rem;
+  }
+  .intro > p:nth-of-type(2) {
+    font-size: 1.15rem;
+  }
+}
+.intro > p + p {
+  margin-top: 1em;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-block: 1em;
+  gap: 1em;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  background-color: var(--LightGrayishMagenta);
+  padding: 1em 2em;
+  font-size: 0.85rem;
+  font-weight: var(--fontwgt-bolder);
+  border-radius: 0.5em;
+}
+@media screen and (min-width: 48rem) {
+  .reviews {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .review {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+  }
+}
+@media screen and (min-width: 51.25rem) {
+  .reviews > :nth-child(2) {
+    padding-inline-end: 5em;
+    transform: translateX(-6em);
+  }
+  .reviews > :nth-child(3) {
+    padding-inline-end: 3em;
+    transform: translateX(-3em);
+  }
+  .reviews > :nth-child(4) {
+    padding-inline-end: 5em;
+  }
+}
+.icon-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.feedback {
+  padding-block: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.feedback-item {
+  background-color: var(--VeryDarkMagenta);
+  color: var(--White);
+  border-radius: 0.5em;
+  padding: 2em;
+  flex-basis: calc((30rem - 100%) * 999);
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 51.25rem) {
+  .feedback > :nth-child(3) {
+    transform: translateY(10%);
+  }
+  .feedback > :nth-child(4) {
+    transform: translateY(20%);
+  }
+}
+.buyer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.buyer > :nth-child(2) > :nth-of-type(1) {
+  font-weight: var(--fontwgt-bold);
+}
+.buyer > :nth-child(2) > :nth-of-type(2) {
+  color: var(--SoftPink);
+}
+.buyer > img {
+  border-radius: 50%;
+  width: 3em;
+}
+.buyer + .remark {
+  margin-top: 1.5em;
+}
+
+.attribution {
+  margin-block-start: 0.5em;
+}

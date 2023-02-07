@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>Frontend Mentor | Loopstudios landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <header id="Header">
+      <div class="container header-container">
+        <div class="primary-nav">
+          <a
+            href="#Header"
+            aria-label="Click logo to return to home page"
+            class="nav-logo"
+          >
+            <img src="./images/logo.svg" alt="Loopstudios logo" />
+          </a>
+          <nav>
+            <button
+              class="open-menu-button menu-button"
+              aria-expanded="false"
+              type="button"
+              aria-label="open navigation"
+              aria-controls="navigation"
+            >
+              <img
+                src="./images/icon-hamburger.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+            <div class="slider-pane">
+              <div class="f-container">
+                <a
+                  class="nav-logo"
+                  href="#Header"
+                  aria-label="Click logo to return to home page"
+                >
+                  <img src="./images/logo.svg" alt="Loopstudios logo" />
+                </a>
+                <button
+                  class="close-menu-button menu-button"
+                  type="button"
+                  aria-label="close navigation"
+                >
+                  <img src="./images/icon-close.svg" alt="" />
+                </button>
+              </div>
+              <ul role="menubar" class="menu-bar" id="navigation">
+                <li role="presentation">
+                  <a href="#About" role="menuitem">About</a>
+                </li>
+                <li role="presentation">
+                  <a href="#" role="menuitem">Careers </a>
+                </li>
+                <li role="presentation">
+                  <a href="#" role="menuitem">Events </a>
+                </li>
+                <li role="presentation">
+                  <a href="#Products" role="menuitem">Products </a>
+                </li>
+                <li role="presentation">
+                  <a href="#" role="menuitem">Support </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <p>Immersive experiences that deliver</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="About" tabindex="-1">
+        <div class="container about-container">
+          <div class="copy">
+            <h1 class="title">the leader in interactive vr</h1>
+            <p class="body">
+              founded in 2011, loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
+          <div class="image">
+            <picture>
+              <source
+                media="(max-width: 767px )"
+                srcset="./images/mobile/image-interactive.jpg"
+              />
+              <source
+                media="(min-width: 768px )"
+                srcset="./images/desktop/image-interactive.jpg"
+              />
+              <img src="./images/mobile/image-interactive.jpg" alt="" />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section id="Products" tabindex="-1">
+        <div class="container products-container">
+          <h2 class="title">Our creations</h2>
+          <div class="image-grid">
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-deep-earth.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-deep-earth.jpg"
+                />
+                <img
+                  src="./images/mobile/image-deep-earth.jpg"
+                  alt="A view of the planet Earth as seen from outer space"
+                />
+              </picture>
+              <p>Deep earth</p>
+            </a>
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-night-arcade.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-night-arcade.jpg"
+                />
+                <img
+                  src="./images/mobile/image-night-arcade.jpg"
+                  alt="An arcade gaming experience"
+                />
+              </picture>
+              <p>Night arcade</p>
+            </a>
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-soccer-team.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-soccer-team.jpg"
+                />
+                <img
+                  src="./images/mobile/image-soccer-team.jpg"
+                  alt="A game of soccer also known as football"
+                />
+              </picture>
+              <p>Soccer team VR</p>
+            </a>
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-grid.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-grid.jpg"
+                />
+                <img
+                  src="./images/mobile/image-grid.jpg"
+                  alt="A racecar event"
+                />
+              </picture>
+              <p>The grid</p>
+            </a>
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-from-above.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-from-above.jpg"
+                />
+                <img
+                  src="./images/mobile/image-from-above.jpg"
+                  alt="Arial view of a highway that snakes round a hill"
+                />
+              </picture>
+              <p>From up above VR</p>
+            </a>
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-pocket-borealis.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-pocket-borealis.jpg"
+                />
+                <img
+                  src="./images/mobile/image-pocket-borealis.jpg"
+                  alt="A nighttime view of the aurora borealis also known as the northern lights"
+                />
+              </picture>
+              <p>Pocket borealis</p>
+            </a>
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-curiosity.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-curiosity.jpg"
+                />
+                <img
+                  src="./images/mobile/image-curiosity.jpg"
+                  alt="The Martian experience as seen from the lens of the Curiousity Rover on the planet Mars"
+                />
+              </picture>
+              <p>The curiosity</p>
+            </a>
+            <a class="product" href="#">
+              <picture>
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/mobile/image-fisheye.jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/desktop/image-fisheye.jpg"
+                />
+                <img
+                  src="./images/mobile/image-fisheye.jpg"
+                  alt="Blue cloudy skies with land in the horizon viewed from a fish's perspective"
+                />
+              </picture>
+              <p>Make it fisheye</p>
+            </a>
+          </div>
+          <a href="#" class="button"> See all </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-left">
+          <a
+            href="#Header"
+            aria-label="Click logo to return to home page"
+            class="footer-logo"
+          >
+            <img src="./images/logo.svg" alt="Loopstudios logo" />
+          </a>
+          <ul class="footer-nav" role="menu">
+            <li role="presentation">
+              <a href="#About" role="menuitem"> About </a>
+            </li>
+            <li role="presentation">
+              <a href="#" role="menuitem"> Careers </a>
+            </li>
+            <li role="presentation">
+              <a href="#" role="menuitem"> Events </a>
+            </li>
+            <li role="presentation">
+              <a href="#Products" role="menuitem"> Products </a>
+            </li>
+            <li role="presentation">
+              <a href="#Support" role="menuitem"> Support </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <ul class="social-links">
+            <li>
+              <a href="#" aria-label="Connect with us on Facebook"
+                ><img src="./images/icon-facebook.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Connect with us on Twitter"
+                ><img src="./images/icon-twitter.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Connect with us on Pinterest"
+                ><img src="./images/icon-pinterest.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Connect with us on Instagram"
+                ><img src="./images/icon-instagram.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+          <p aria-hidden="true" class="copyright">
+            © 2021 Loopstudios. All rights reserved.
+          </p>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/bitbx/loopstudios-landing-page">bitbx</a>.
+        </div>
+      </div>
+    </footer>
+    <script src="./src/main.js"></script>
+  </body>
+</html>

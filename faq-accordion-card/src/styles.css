@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 0.75rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  --pt-very-dark-desat-blue: hsl(238, 29%, 16%);
+  --pt-soft-red: hsl(14, 88%, 65%);
+  --bg-soft-violet: hsl(273, 75%, 66%);
+  --bg-soft-blue: hsl(240, 73%, 65%);
+  --nt-very-dark-gray-blue: hsl(237, 12%, 33%);
+  --nt-dark-gray-blue: hsl(240, 6%, 50%);
+  --div-light-gray-blue: hsl(240, 5%, 91%);
+
+  --fontwgt-bold: 400;
+  --fontwgt-bolder: 700;
+
+  --space: 1.75em;
+  --accordion-hor-space: var(--space);
+  --accordion-vert-space: 4em;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  display: grid;
+  place-content: center;
+  padding: var(--space);
+  padding-block-start: 10em;
+  background-image: linear-gradient(var(--bg-soft-violet), var(--bg-soft-blue));
+}
+
+.accordion-block {
+  background-color: white;
+  padding-inline: var(--accordion-hor-space);
+  padding-block-end: var(--accordion-vert-space);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 1.5rem;
+  max-width: 320px;
+  box-shadow: 10px 20px 40px -20px var(--nt-very-dark-gray-blue);
+}
+
+.block-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+img + .widgets {
+  margin-top: 1.75em;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --accordion-vert-space: 6em;
+    --accordion-hor-space: 6em;
+  }
+  .accordion-block {
+    padding-block-start: var(--accordion-vert-space);
+    min-width: 760px;
+    display: block;
+    overflow: hidden;
+  }
+  .block-title {
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+  }
+  img + .widgets {
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
+.shadow-icon {
+  order: -1;
+  width: 90%;
+  margin-inline: auto;
+  margin-block-end: var(--space);
+}
+.woman-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 75%;
+}
+.woman-icon-big,
+.box-icon,
+.shadow-icon-big {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .shadow-icon {
+    display: none;
+  }
+  .woman-icon {
+    display: none;
+  }
+  .shadow-icon-big {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-60%, -30%);
+    width: 100%;
+  }
+  .woman-icon-big {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-18%, -50%);
+    width: 48%;
+  }
+  .grand-parent {
+    transform: scale(1);
+    position: relative;
+  }
+  .box-icon {
+    display: block;
+    position: fixed;
+    top: 32%;
+    left: -12%;
+    animation: sway 2s ease-in-out 0s infinite alternate;
+  }
+
+  @keyframes sway {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translate(-10%);
+    }
+  }
+}
+.accordion-block + .attribution {
+  margin-top: 3em;
+}
+
+details {
+  border-bottom: 1px solid var(--div-light-gray-blue);
+  padding-block-end: 1em;
+  position: relative;
+}
+details + details {
+  margin-block-start: 1em;
+}
+details > * + * {
+  margin-top: 0.5em;
+}
+details > p {
+  font-size: 0.85rem;
+  padding-right: 4.5em;
+}
+details > summary {
+  list-style: none;
+  transition: color 150ms;
+  cursor: pointer;
+  padding-right: 4.95em;
+}
+details:hover > summary {
+  color: var(--pt-soft-red);
+}
+details > summary::before {
+  content: url('../images/icon-arrow-down.svg');
+  position: absolute;
+  right: 0;
+  transition: transform 0.5s;
+}
+details[open] > summary::before {
+  transform: rotate(180deg);
+}
+details[open] > summary {
+  font-weight: var(--fontwgt-bolder);
+}
