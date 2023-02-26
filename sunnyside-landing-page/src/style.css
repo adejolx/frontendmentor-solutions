@@ -451,7 +451,6 @@ picture {
 /* FOOTER */
 .footer {
   background-color: var(--footer-light);
-  background-clip: text;
   position: relative;
 }
 
